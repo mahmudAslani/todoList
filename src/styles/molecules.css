@@ -1,0 +1,88 @@
+/* =====================================================
+                          molecules
+========================================================*/
+
+
+
+
+/* =====================================================
+                          task
+========================================================*/
+.task {
+  padding: 12px 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #fff;
+  line-height: normal;
+  position: relative;
+  height: fit-content;
+  cursor: grab;
+  position: relative;
+  /* transform: rotateZ(-1deg); */
+  -moz-user-select: element;
+  user-select: element;
+}
+.task--section-body {
+  display: flex;
+  /* position: relative; */
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  background: #fff;
+  gap: 10px;
+  cursor: auto;
+  -moz-user-select: element;
+  user-select: element;
+}
+.task:hover .delete-icon {
+  display: block;
+}
+.task:focus,
+.task--section-body:focus {
+  outline: none;
+}
+.task #typography {
+  -moz-user-select: element;
+  user-select: element;
+}
+.task:active:not(:focus-within) {
+  transform: rotateZ(-3deg);
+  position: relative;
+  top: 10px;
+}
+/* ================ task border color ======================== */
+#category[categoryname="todo"] .task {
+  border: 1px solid var(--todo--border-color);
+}
+#category[categoryname="doing"] .task {
+  border: 1px solid var(--doing--border-color);
+}
+#category[categoryname="done"] .task {
+  border: 1px solid var(--done--border-color);
+}
+
+/* =====================================================
+                          category sections
+========================================================*/
+.category__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
+}
+.add-task {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer !important;
+}
+.category__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+

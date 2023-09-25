@@ -1,0 +1,29 @@
+/* =====================================================
+                  define css variables
+========================================================*/
+
+:root {
+  --text-color: #3a3a3a;
+  --ckecked-color: #9bcd90;
+
+  --todo--checkbox-border-color: #edd6d3;
+  --todo--bg-color: #fef4f3;
+  --todo--title-color: #6e1e29;
+  --todo--new-color: #d37a87;
+  --todo--delete-color: #f4c5cb;
+  --todo--tasks-color: #d4afb4;
+  --todo--border-color: #f3e1df;
+
+  --doing--bg-color: #fffbf2;
+  --doing--title-color: #795b19;
+  --doing--new-color: #c2a25b;
+  --doing--tasks-color: #decca4;
+  --doing--checkbox-border-color: #dbd2bc;
+  --doing--border-color: #eae2cf;
+
+  --done--bg-color: #fef4f3;
+  --done--title-color: #286c1a;
+  --done--tasks-color: #bcd7b6;
+  --done--checkbox-border-color: #d0e7cb;
+  --done--border-color: #ddeed9;
+}

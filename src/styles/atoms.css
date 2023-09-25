@@ -1,0 +1,77 @@
+/* =====================================================
+                          Atoms
+========================================================*/
+
+/* ====================== checkbox ===================== */
+/* Hide the browser's default checkbox */
+input {
+  outline: none;
+  cursor: text !important;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--todo--checkbox-border-color);
+  background-color: #fff;
+  margin: auto 0;
+  color: var(--ckecked-color);
+  cursor: pointer !important;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: var(--ckecked-color);
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-image: url("data:image/svg+xml;base64, PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgPgo8cmVjdCBpZD0iUmVjdGFuZ2xlIDUiIHg9IjAuNSIgeT0iMC41IiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNEMEU3Q0IiIHN0cm9rZS1vcGFjaXR5PSIwIi8+CjxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik02LjgyNTExIDkuOTcyMDVMNC4wNDE0OCA3LjI3MzU2TDMgOC4zMjAxNEw2LjgyNjIzIDEyTDEzIDYuMDE1MDZMMTEuOTU0IDVMNi44MjUxMSA5Ljk3MjA1WiIgZmlsbD0iIzlCQ0Q5MCIvPgo8L2c+Cjwvc3ZnPg==");
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+[contentEditable]:empty::before {
+  content: attr(placeholder);
+  font-size: 12px;
+  color: gray;
+  opacity: 50%;
+}
+/* ================= checkbox border color ================== */
+#category[categoryname="todo"] .checkbox {
+  border: 1px solid var(--todo--checkbox-border-color);
+}
+#category[categoryname="doing"] .checkbox {
+  border: 1px solid var(--doing--checkbox-border-color);
+}
+#category[categoryname="done"] .checkbox {
+  border: 1px solid var(--done--checkbox-border-color);
+}
+
+/* ========================= delete icon ================ */
+.delete-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  display: none;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-70%);
+  cursor: pointer;
+}
+
+/* ====================== add icon ===================== */
+#category[categoryname="todo"] .add-task svg {
+  stroke: var(--todo--new-color);
+}
+#category[categoryname="doing"] .add-task svg {
+  stroke: var(--doing--new-color);
+}
+
+/* ===================== others ======================= */
+.hide {
+  transition: 0.01s;
+  transform: translateX(-9999px) !important;
+}

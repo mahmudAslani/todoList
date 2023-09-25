@@ -1,0 +1,83 @@
+#typography {
+  font-family: "Inter", sans-serif;
+}
+.typography {
+  line-height: normal;
+  font-size: 13px;
+  font-weight: normal;
+}
+#typography:focus {
+  outline: none;
+}
+.font--style--head {
+  font-size: 34px;
+  font-weight: bold;
+}
+.font--style--title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.font--style--subTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.font--style--semiTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+.font--style--content {
+  font-size: 12px;
+  font-weight: 600;
+}
+.font--style--subContent {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ============ common text color ================= */
+#typography {
+  color: var(--text-color);
+}
+
+/* ============ text title color ================= */
+#category[categoryName="todo"] .title {
+  color: var(--todo--title-color);
+}
+#category[categoryName="doing"] .title {
+  color: var(--doing--title-color);
+}
+
+#category[categoryName="done"] .title {
+  color: var(--done--title-color);
+}
+
+/* ============ text subContent color ================= */
+
+#category[categoryName="todo"] .subContent {
+  color: var(--todo--tasks-color);
+}
+#category[categoryName="doing"] .subContent {
+  color: var(--doing--tasks-color);
+  /* color: blue; */
+}
+#category[categoryName="done"] .subContent {
+  color: var(--done--tasks-color);
+}
+
+/* ============ text semiTitle color ================= */
+
+#category[categoryName="todo"] .semiTitle {
+  color: var(--todo--new-color);
+}
+#category[categoryName="doing"] .semiTitle {
+  color: var(--doing--new-color);
+}
+#category[categoryName="done"] .semiTitle {
+  color: var(--done--new-color);
+}
+/* ===========  */
+#category[categoryName="done"] .task #typography {
+  text-decoration: line-through;
+}
