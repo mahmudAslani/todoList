@@ -1,8 +1,5 @@
 import React, { memo } from "react";
-import {
-  CAHNGETODOINDEX,
-  FontStyle,
-} from "../../helper/constants";
+import { CAHNGETODOINDEX, FontStyle } from "../../helper/constants";
 import Typography from "../atoms/Typography";
 import Task from "../molecules/Task";
 import AddTask from "../atoms/AddTask";
@@ -32,7 +29,7 @@ function Category({ categoryName, data, dispatch }) {
       onDropCapture={handleOnDrop}
     >
       <div className="category__head">
-        <Typography fontStyle={FontStyle.title}>Todo</Typography>
+        <Typography fontStyle={FontStyle.title}>{categoryName}</Typography>
         <Typography fontStyle={FontStyle.subContent}>
           {data.length} Tasks
         </Typography>
